@@ -19,10 +19,8 @@ pipeline {
         stage ('test') {
             
                 steps {
-                    sh 'mvn clean test'
-                    archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
-                
-            }
-        }
+                    archiveArtifacts artifacts: 'target/*.war', followSymlinks: fals
+                  }
+          }
     }
 }
