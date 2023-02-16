@@ -1,24 +1,12 @@
 pipeline {
     agent any
     stages {
-        stage ('clean-up') {
-            steps {
-                cleanWs()
-            }
-        }
-        
-        stage ('clone') {
-            steps {
-                sh 'git clone https://github.com/RnukaPrasad/sBoot.git'
-            }
-        }
-        
         stage ('build') {
             
                 steps {
                 dir ('sBoot'){
                     
-                    sh 'mvn clean install'
+                   sh 'mvn clean install'
             
                 }
             
