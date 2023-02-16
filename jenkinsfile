@@ -11,10 +11,7 @@ pipeline {
         stage ('build') {
             
                 steps {
-                
-                    
-                    sh 'mvn clean install'
-        
+                 sh 'mvn clean install'
             }
             
         }
@@ -22,7 +19,7 @@ pipeline {
         stage ('test') {
             
                 steps {
-                    
+                    sh 'mvn clean test'
                     archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
                 
             }
